@@ -1,22 +1,13 @@
-import { useState } from 'react'
+import { Routes } from 'react-router-dom'
 import './App.css'
-import { Button } from './components/ui/button'
-import { Input } from './components/ui/input'
+import { generateRoutes } from './routes'
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>``
-    <Button  >
-      Default
-    </Button>
-    <Input placeholder="Enter text here" />
-    <Input placeholder="Enter text here" />
-    <Input placeholder="Enter text here" />
-    <Input placeholder="Enter text here" />
-    </>
-    
+    <Routes>
+      {generateRoutes()}
+    </Routes>
   )
 }
 
