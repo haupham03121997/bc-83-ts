@@ -1,13 +1,14 @@
-import { Routes } from 'react-router-dom'
-import './App.css'
-import { generateRoutes } from './routes'
+import { useRoutes } from 'react-router-dom';
+import './App.css';
+import { routes } from './routes';
 
 
 function App() {
+  const routerElements = useRoutes(routes);
   return (
-    <Routes>
-      {generateRoutes()}
-    </Routes>
+    <>
+      {routerElements}
+    </>
   )
 }
 
