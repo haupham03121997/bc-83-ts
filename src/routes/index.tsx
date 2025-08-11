@@ -39,7 +39,9 @@ export const routes: RouteObject[] = [
         // /auth/register
         path: "register",
         element: withSuspense(RegisterPage)
-      }
+      },
+      // forgot password
+      // email success
     ]
   },
   {

@@ -1,4 +1,5 @@
 
+import type { CurrentUser } from '@/interfaces/auth.interface';
 import axios, { type AxiosInstance } from "axios";
 const api : AxiosInstance = axios.create({
  baseURL: import.meta.env.VITE_API_URL,
@@ -8,7 +9,7 @@ const api : AxiosInstance = axios.create({
 // Interceptors
 api.interceptors.request.use((config:any)  => {
   const userLocal: string | null = localStorage.getItem("user");
-  const userParsed = userLocal ? JSON.parse(userLocal) : null;
+  const userParsed : CurrentUser | null  = userLocal ? JSON.parse(userLocal) : null;
   const accessToken = userParsed ? userParsed.accessToken : null;
   return {
     ...config,
