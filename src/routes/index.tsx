@@ -44,6 +44,20 @@ export const routes: RouteObject[] = [
       // email success
     ]
   },
+  // {
+  //   path: "/admin",
+  //   element: withSuspense(<p>Admin</p>),
+  //   children: [
+  //     {
+  //       path: "users-management",
+  //       element: withSuspense(<p>Users Management</p>)
+  //     },
+  //     {
+  //       path: "movies-management",
+  //       element: withSuspense(<p>Movies Management</p>)
+  //     }
+  //   ]
+  // },
   {
     path: "*",
     element: <div>Not Found</div>
